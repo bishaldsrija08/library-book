@@ -27,6 +27,9 @@ app.patch("/books/:id", (req, res)=>{
 })
 
 
+// DATABASE_URL="postgresql://postgres.gtsglklxjsxsfcpezdgy:admin@aws-0-ap-south-1.pooler.supabase.com:6543/postgres"
+
+
 const port = 3000
 app.listen(port,()=>{
     console.log("Server started successfully at port " + port)

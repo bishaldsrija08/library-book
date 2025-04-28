@@ -1,5 +1,6 @@
 // const app = require("express")()
 const express = require("express")
+require("./database/connection")
 const app = express()
 
 app.get("/books", (req, res)=>{

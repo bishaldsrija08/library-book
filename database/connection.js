@@ -3,6 +3,7 @@
 const {Sequelize, DataTypes} =require("sequelize")
 const bookModel = require("./models/book.model")
 const User = require("./models/user.model")
+const productModel = require("./models/product.model")
 
 const sequelize = new Sequelize("postgresql://postgres.gtsglklxjsxsfcpezdgy:admin@aws-0-ap-south-1.pooler.supabase.com:6543/postgres")
 
@@ -20,6 +21,7 @@ db.sequelize = sequelize
 
 db.books = bookModel(sequelize, DataTypes)
 db.user = User(sequelize, DataTypes)
+db.product = productModel(sequelize,DataTypes)
 
 //Migration of database goes here
 sequelize.sync({alter: false}).then(()=>{

@@ -1,6 +1,4 @@
-const { response } = require("express");
 const { books } = require("../database/connection");
-
 
 exports.fetchBook = async (req, res) => {
     //logic to  find all books  from database

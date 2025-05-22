@@ -34,6 +34,7 @@ exports.deleteBook = async (req, res) => {
     const id = req.params.id
     await books.destroy({where:{id}})
     res.json({
+        status: 2000,
         message: "Book deleted successfylly."
     })
 }
